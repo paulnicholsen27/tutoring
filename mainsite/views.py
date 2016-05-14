@@ -10,6 +10,10 @@ class BlogView(TemplateView):
     template_name = "blog.html"
 
 
+class BlogEntryView(TemplateView):
+    template_name = "blog.html"
+
+
 class AboutView(TemplateView):
     template_name = "about.html"
 
