@@ -5,6 +5,6 @@ from .models import Blog
 
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
-    exclude = ("slug",)
-    # prepopulated_fields = {'slug': ('title',)}
-
+    
+    prepopulated_fields = {'slug': ('title',)}
+    list_display =("title", "published", "publish_date")
