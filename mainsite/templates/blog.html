@@ -22,7 +22,7 @@
                         <small>{{ blog.publish_date }}</small>
                     </h2>
                     <p>{{ blog.opening_content }}</p>
-                    <a href="{% url 'blog_entry' slug=blog.slug pk=blog.pk %}" class="btn btn-default btn-lg">Read More</a>
+                    <a href="{{ blog.get_absolute_url }}" class="btn btn-default btn-lg">Read More</a>
                     <hr>
                 </div>
                 {% endfor %}

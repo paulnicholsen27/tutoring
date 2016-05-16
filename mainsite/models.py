@@ -18,3 +18,6 @@ class Blog(models.Model):
 
     def full_content(self):
         return self.opening_content + self.extended_content
+
+    def get_absolute_url(self):
+        return reverse("blog_entry", kwargs={"slug": self.slug, "pk": self.pk})
