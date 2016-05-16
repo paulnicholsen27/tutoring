@@ -16,12 +16,11 @@
                 </div>
                 {% for blog in blog_entries %}
                 <div class="col-lg-12 text-center">
-                    <img class="img-responsive img-border img-full" src="{% static 'img/slide-1.jpg' %}" alt="">
                     <h2>{{ blog.title }}
                         <br>
                         <small>{{ blog.publish_date }}</small>
                     </h2>
-                    <p>{{ blog.opening_content }}</p>
+                    <p class="text-justify">{{ blog.opening_content|safe }}</p>
                     <a href="{{ blog.get_absolute_url }}" class="btn btn-default btn-lg">Read More</a>
                     <hr>
                 </div>
