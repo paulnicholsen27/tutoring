@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">{{ blog.title }}
+                        <br>
+                        <small>{{ blog.publish_date }}</small>
+                    </h2>
+                    <hr>
+                </div>
+                <div class="col-lg-12 text-justify">
+                    <p>{{ blog.full_content|safe }}</p>
+                    <hr>
+                </div>
+                <div>{{blog.get_newer|safe}}</div>
+                <div class="col-lg-12 text-center">
+                    <ul class="pager">
+                        {% if prev_entry %}
+                        <li class="previous"><a href="{{prev_entry.get_absolute_url}}">&larr; Older</a>
+                        </li>
+                        {% endif %}
+                        {% if next_entry %}
+                        <li class="next"><a href="{{next_entry.get_absolute_url}}">Newer &rarr;</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+{% endblock content %}
