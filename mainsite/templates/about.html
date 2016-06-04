@@ -14,7 +14,11 @@
                     <hr>
                 </div>
                 <div class="col-md-6">
-                    <img class="img-responsive img-border-left" src="{% static 'img/slide-2.jpg' %}" alt="">
+                    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div class="img-responsive img-border-left"  style='overflow:hidden'><div id='gmap_canvas'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(38.889404,-76.978251),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(38.889404,-76.978251)});infowindow = new google.maps.InfoWindow({content:'<strong>Within Reach Psychotherapy</strong><br>1815 East Capitol St SE, Washington, DC 20003<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+                    {% comment %}
+                    http://embedgooglemaps.com/en/
+                    add class="img-responsive img-border-left" to main containing div, remove size attributes from style tags
+                    {% endcomment %}
                 </div>
                 <div class="col-md-6">
                     <p>This is a great place to introduce your company or project and describe what you do.</p>
