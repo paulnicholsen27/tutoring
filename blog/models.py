@@ -24,7 +24,7 @@ class Blog(models.Model):
         return self.opening_content + self.extended_content
 
     def get_absolute_url(self):
-        return reverse("blog:blog_entry", kwargs={"slug": self.slug, "pk": self.pk})
+        return reverse("blog:blog_detail", kwargs={"slug": self.slug, "pk": self.pk})
 
     def __unicode__(self):
         return self.title

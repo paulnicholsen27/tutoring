@@ -24,7 +24,7 @@ class BlogView(TemplateView):
         return context
 
 
-class BlogEntryView(TemplateView):
+class BlogDetailView(TemplateView):
     # TODO don't show draft posts
     template_name = "blog_detail.html"
 
@@ -50,7 +50,7 @@ class BlogEntryView(TemplateView):
             return None
 
     def get_context_data(self, **kwargs):
-        context = super(BlogEntryView, self).get_context_data(**kwargs)
+        context = super(BlogDetailView, self).get_context_data(**kwargs)
         context.update({
             "blog": self.blog_detail(),
             "next_entry": self.next_entry(),
