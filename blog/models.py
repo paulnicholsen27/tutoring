@@ -25,3 +25,6 @@ class Blog(models.Model):
 
     def get_absolute_url(self):
         return reverse("blog:blog_entry", kwargs={"slug": self.slug, "pk": self.pk})
+
+    def __unicode__(self):
+        return self.title
