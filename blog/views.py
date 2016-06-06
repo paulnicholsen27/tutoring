@@ -5,7 +5,7 @@ from django.views.generic import TemplateView
 from .models import Blog
 
 class BlogView(TemplateView):
-    template_name = "blog.html"
+    template_name = "blog/blog.html"
 
     def blog_entries(self):
         paginator = Paginator(Blog.objects.filter(published=1).order_by("-publish_date"), 2)
@@ -26,7 +26,7 @@ class BlogView(TemplateView):
 
 class BlogDetailView(TemplateView):
     # TODO don't show draft posts
-    template_name = "blog_detail.html"
+    template_name = "blog/blog_detail.html"
 
     def blog_detail(self):
         return Blog.objects.get(pk=self.kwargs.get("pk", None))
