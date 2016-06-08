@@ -4,11 +4,15 @@ from django.views.generic import TemplateView
 
 from .models import Blog
 
+
 class BlogView(TemplateView):
     template_name = "blog/blog.html"
 
     def blog_entries(self):
-        paginator = Paginator(Blog.objects.filter(published=1).order_by("-publish_date"), 2)
+        entries_per_page = 5
+        paginator = Paginator(Blog.objects
+                              .filter(published=1)
+                              .order_by("-publish_date"), entries_per_page)
         page = self.request.GET.get("page", None)
         try:
             blog_entries = paginator.page(page)
@@ -25,7 +29,6 @@ class BlogView(TemplateView):
 
 
 class BlogDetailView(TemplateView):
-    # TODO don't show draft posts
     template_name = "blog/blog_detail.html"
 
     def blog_detail(self):
@@ -34,18 +37,18 @@ class BlogDetailView(TemplateView):
     def prev_entry(self):
         try:
             return (Blog.objects
-                .filter(publish_date__gt=self.blog_detail().publish_date)
-                .filter(published=1)
-                .order_by('-publish_date')[0])       
+                    .filter(publish_date__lt=self.blog_detail().publish_date)
+                    .filter(published=1)
+                    .order_by('-publish_date')[0])
         except IndexError:
-            return None 
+            return None
 
     def next_entry(self):
         try:
             return (Blog.objects
-                .filter(publish_date__lt=self.blog_detail().publish_date)
-                .filter(published=1)
-                .order_by('-publish_date')[0])
+                    .filter(publish_date__gt=self.blog_detail().publish_date)
+                    .filter(published=1)
+                    .order_by('publish_date')[0])
         except IndexError:
             return None
 
@@ -55,5 +58,5 @@ class BlogDetailView(TemplateView):
             "blog": self.blog_detail(),
             "next_entry": self.next_entry(),
             "prev_entry": self.prev_entry()
-            })
+        })
         return context
