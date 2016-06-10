@@ -1,0 +1,8 @@
+You have a new inquiry on your website:
+
+Name:  {{contact_name}}
+Phone:  {{contact_phone}}
+Email:  {{contact_email}}
+Message:  {{content}}
+
+Wiener.
