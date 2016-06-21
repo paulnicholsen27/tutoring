@@ -1,0 +1,36 @@
+$mobile-breakpoint: 767px;
+$tablet-breakpoint: 992px;
+$red: red;
+
+#gmap_canvas {
+    height: 400px;
+    width: 100%;
+}
+
+/* contact form */
+
+.errorlist {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.errorlist li {
+    list-style: none;
+    color: red;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#id_cc_me {
+    box-shadow: none;
+    margin-top: 0;
+}
+
+/*@media (max-width: var(--small-screen-breakpoint)) {
+    body{
+        display: none;
+    }
+}
+*/
+
+body { background-color: blue;
+}
