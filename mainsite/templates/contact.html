@@ -42,7 +42,7 @@
                         <strong>form</strong>
                     </h2>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, vitae, distinctio, possimus repudiandae cupiditate ipsum excepturi dicta neque eaque voluptates tempora veniam esse earum sapiente optio deleniti consequuntur eos voluptatem.</p>
+                    <p>Please fill out the form below and I will get in touch with you to set up an initial appointment.</p>
                     <form role="form" action="{% url 'contact' %}" method="post">
                         {% csrf_token %}
                         <div class="row">
@@ -57,12 +57,12 @@
                                 <label>Phone Number</label>
                                 {{ form.contact_phone}}
                             </div>
-                            <div class="form-group col-lg-4">
+                            <div class="form-group col-lg-4" id="email">
                                 {{ form.contact_email.errors }}
                                 <label>Email Address</label>
                                 {{ form.contact_email }}
                             </div>
-                            <div class="form-group col-lg-1">
+                            <div class="form-group col-lg-1" id="cc">
                                 <label>CC Me?</label>
                                 {{ form.cc_me }}
                             </div>
@@ -73,7 +73,7 @@
                                 {{ form.content }}
                             </div>
                         </div>
-                            <div class="form-group col-lg-12">
+                            <div class="form-group col-lg-12" id="submit">
                                 <input type="hidden" name="save" value="contact">
                                 <button type="submit" class="btn btn-default">Submit</button>
                             </div>

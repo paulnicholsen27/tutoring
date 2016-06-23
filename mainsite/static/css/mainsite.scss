@@ -1,6 +1,4 @@
-$mobile-breakpoint: 767px;
-$tablet-breakpoint: 992px;
-$red: red;
+@import "variables";
 
 #gmap_canvas {
     height: 400px;
@@ -25,12 +23,17 @@ $red: red;
     margin-top: 0;
 }
 
-/*@media (max-width: var(--small-screen-breakpoint)) {
-    body{
-        display: none;
+@media (max-width: $small-screen-breakpoint) {
+    #contact_form #email {
+        width: calc(100% - 80px);
+        float: left;
+    }
+
+    #contact_form #cc {
+        float: right;
     }
 }
-*/
 
-body { background-color: blue;
+#contact_form #submit {
+    padding-left: 0;
 }

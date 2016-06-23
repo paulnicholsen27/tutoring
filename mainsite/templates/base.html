@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load compress %}
 <html lang="en">
 
 <head>
@@ -17,8 +18,9 @@
 
     <!-- Custom CSS -->
     <link href="{% static 'css/business-casual.css' %}" rel="stylesheet">
-    <link href="{% static 'css/mainsite.css' %}" rel="stylesheet">
-
+    {% compress css %}
+    <link href="{% static 'css/mainsite.scss' %}" rel="stylesheet" type="text/x-scss">
+    {% endcompress %}
     <!-- Fonts -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
