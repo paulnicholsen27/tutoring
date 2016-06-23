@@ -43,24 +43,24 @@
                     </h2>
                     <hr>
                     <p>Please fill out the form below and I will get in touch with you to set up an initial appointment.</p>
-                    <form role="form" action="{% url 'contact' %}" method="post">
+                    <form role="form" action="{% url 'contact' %}/#contact_form" method="post">
                         {% csrf_token %}
                         <div class="row">
                             {{ form.non_field_errors }}
                             <div class="form-group col-lg-4">
-                                {{ form.contact_name.errors }}
                                 <label>Name</label>
                                 {{ form.contact_name }}
+                                {{ form.contact_name.errors }}
                             </div>
                             <div class="form-group col-lg-3">
-                                {{ form.contact_phone.errors }}
                                 <label>Phone Number</label>
                                 {{ form.contact_phone}}
+                                {{ form.contact_phone.errors }}
                             </div>
                             <div class="form-group col-lg-4" id="email">
-                                {{ form.contact_email.errors }}
                                 <label>Email Address</label>
                                 {{ form.contact_email }}
+                                {{ form.contact_email.errors }}
                             </div>
                             <div class="form-group col-lg-1" id="cc">
                                 <label>CC Me?</label>
@@ -68,9 +68,9 @@
                             </div>
                             <div class="clearfix"></div>
                             <div class="form-group col-lg-12">
-                                {{ form.content.errors}}
                                 <label>Message</label>
                                 {{ form.content }}
+                                {{ form.content.errors}}
                             </div>
                         </div>
                             <div class="form-group col-lg-12" id="submit">
