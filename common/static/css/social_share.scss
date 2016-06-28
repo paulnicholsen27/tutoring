@@ -1,0 +1,8 @@
+.share-button#facebook a:before {
+    content: " ";
+    background-image: url("../../static/img/facebook.png");
+    background-repeat: no;
+    display: block;
+    width: 60px;
+    height: 60px;
+}
