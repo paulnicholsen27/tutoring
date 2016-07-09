@@ -37,11 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mainsite',
-    'blog',
+    'django.contrib.sites',
+    'django_social_share',
     'ckeditor',
     'ckeditor_uploader',
     'compressor',
+    'mainsite',
+    'common',
+    'blog',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -68,6 +71,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.core.context_processors.request'
             ],
         },
     },

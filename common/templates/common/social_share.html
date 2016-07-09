@@ -5,9 +5,8 @@
 <link href="{% static 'css/social_share.scss' %}" rel="stylesheet" type="text/x-scss">
 {% endcompress %}
 
-<div class="sharekit">
-    Share this:
-    <div class="share-button" id="facebook">{% post_to_facebook blog %}</div>
-    <div class="share-button" id="twitter">{% post_to_twitter blog.title blog %}</div>
-    <div class="share-button" id="google-plus">{% post_to_gplus blog %}</div>
-</div>
+<ul class="sharekit">
+    <li class="share-button" id="facebook">{% post_to_facebook blog %}</li>
+    <li class="share-button" id="twitter">{% post_to_twitter blog.title blog %}</li>
+    <li class="share-button" id="google-plus">{% post_to_gplus blog %}</li>
+</ul>
