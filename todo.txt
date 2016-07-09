@@ -2,3 +2,6 @@ todo.txt
 
 timezones
 prev/next only on published posts
+images aren't loading from ckeditor
+
+Add acceptable websites to Google API before prod
