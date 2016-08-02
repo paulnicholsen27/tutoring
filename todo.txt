@@ -8,4 +8,4 @@ Add acceptable websites to Google API before prod
 
 deployment checklist in settings.py
 
-add email to sharekit
+double-check get_absolute_url method
