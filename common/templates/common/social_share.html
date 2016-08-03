@@ -13,7 +13,7 @@
 {% endblock extrahead %}
 
 <ul class="sharekit">
-    <li class="share-button" id="facebook">{% post_to_facebook blog blog.title %}</li>
+    <li class="share-button" id="facebook">{% post_to_facebook blog %}</li>
     <li class="share-button" id="twitter">{% post_to_twitter blog.title blog %}</li>
     <li class="share-button" id="google-plus">{% post_to_gplus blog %}</li>
     <li class="share-button" id="email"><a target="_blank" href="mailto:?&amp;subject=Within%20Reach%20Blog%20Post--{{blog.title}}

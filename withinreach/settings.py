@@ -38,13 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'django_social_share',
     'ckeditor',
     'ckeditor_uploader',
     'compressor',
     'mainsite',
     'common',
     'blog',
+    'django_social_share',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -64,7 +64,6 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
-        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -74,6 +73,11 @@ TEMPLATES = [
                 'django.core.context_processors.request',
                 'mainsite.context_processors.google_api'
             ],
+            'loaders': (
+                'django.template.loaders.filesystem.Loader',
+                'django.template.loaders.app_directories.Loader',
+                'django.template.loaders.eggs.Loader',
+            ),
         },
     },
 ]
