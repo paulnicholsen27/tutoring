@@ -13,3 +13,4 @@ double-check get_absolute_url method
 
 django.bitly?
 
+auto add slugs https://keyerror.com/blog/automatically-generating-unique-slugs-in-django

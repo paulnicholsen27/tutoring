@@ -4,6 +4,7 @@ from django.views.generic import TemplateView, FormView
 from forms import ContactForm
 from common.tokens_and_keys import GOOGLE_API_KEY
 
+
 class HomepageView(TemplateView):
     template_name = "homepage.html"
 
@@ -18,7 +19,6 @@ class ContactView(FormView):
 
     def get(self, request, *args, **kwargs):
         form = self.form_class(initial=self.initial)
-        print "GET"
         return render(request, self.template_name, {'form': form})
 
     def post(self, request, *args, **kwargs):
@@ -33,5 +33,3 @@ class ContactView(FormView):
     #     print GOOGLE_API_KEY
     #     context.update({"form": self.form_class, "google_api": GOOGLE_API_KEY})
     #     return context
-
-
