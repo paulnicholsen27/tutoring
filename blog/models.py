@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.core.urlresolvers import reverse
+from django.utils.text import slugify
 
 from ckeditor_uploader.fields import RichTextUploadingField
 
@@ -21,10 +22,18 @@ class Blog(models.Model):
     last_modified = models.DateTimeField(auto_now=True)
 
     def full_content(self):
-        return self.opening_content + self.extended_content
+        if self.extended_content:
+            return self.opening_content + self.extended_content
+        else:
+            return self.opening_content
 
     def get_absolute_url(self):
         return reverse("blog:blog_detail", kwargs={"slug": self.slug, "pk": self.pk})
 
     def __unicode__(self):
         return self.title
+
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.slug = slugify(self.title)
+        super(Blog, self).save(*args, **kwargs)

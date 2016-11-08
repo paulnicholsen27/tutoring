@@ -10,6 +10,7 @@ class TestPageLoads(TestCase):
         self.client = Client()
         self.published_blog = Blog(
             title="published",
+            opening_content="blah blah",
         )
         self.published_blog.save()
 
@@ -24,4 +25,3 @@ class TestPageLoads(TestCase):
                                           "pk": self.published_blog.pk})
         r = self.client.get(blog_detail_url)
         self.assertEqual(r.status_code, 200)
-
