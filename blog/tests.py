@@ -10,7 +10,8 @@ class TestPageLoads(TestCase):
         self.client = Client()
         self.published_blog = Blog(
             title="published",
-            opening_content="blah blah",
+            opening_content="opening content",
+            extended_content="extended content"
         )
         self.published_blog.save()
 
@@ -25,3 +26,23 @@ class TestPageLoads(TestCase):
                                           "pk": self.published_blog.pk})
         r = self.client.get(blog_detail_url)
         self.assertEqual(r.status_code, 200)
+
+
+class TestBlogModelMethods(TestCase):
+
+    def setUp(self):
+        self.client = Client()
+        self.published_blog = Blog(
+            title="published",
+            opening_content="opening content",
+            extended_content="extended content"
+        )
+        self.published_blog.save()
+
+    def test_get_absolute_url(self):
+        expected_url = "/blog/{0}/{1}/".format(self.published_blog.slug, self.published_blog.id)
+        self.assertEqual(self.published_blog.get_absolute_url(), expected_url)
+
+    def test_full_content(self):
+        expected_full_content = self.published_blog.opening_content + self.published_blog.extended_content
+        self.assertEqual(self.published_blog.full_content(), expected_full_content)

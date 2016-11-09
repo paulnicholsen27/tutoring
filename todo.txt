@@ -13,4 +13,8 @@ double-check get_absolute_url method
 
 django.bitly?
 
-auto add slugs https://keyerror.com/blog/automatically-generating-unique-slugs-in-django
+shouldn't be able to save blog with missing mandatory info:  check.
+
+add shortcut to admin for Jason
+
+make slug field read only
