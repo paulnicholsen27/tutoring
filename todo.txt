@@ -17,4 +17,4 @@ shouldn't be able to save blog with missing mandatory info:  check.
 
 add shortcut to admin for Jason
 
-make slug field read only
+unpublished blogs showing up on main/detail pages
