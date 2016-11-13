@@ -15,9 +15,11 @@ class Blog(models.Model):
 
     title = models.CharField(max_length=255, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
-    opening_content = RichTextUploadingField()
-    extended_content = RichTextUploadingField(blank=True, null=True)
-    published = models.IntegerField(choices=PUBLISH_CHOICES, default=2)
+    opening_content = RichTextUploadingField(help_text="Teaser text to appear on main blog page")
+    extended_content = RichTextUploadingField(blank=True, null=True,
+                                              help_text="Remainder of text to appear on detail page of entry (optional)")
+    published = models.IntegerField(choices=PUBLISH_CHOICES, default=2,
+                                    help_text="Set to 'Published' when post is ready to appear to public")
     publish_date = models.DateTimeField(db_index=True, auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
 
