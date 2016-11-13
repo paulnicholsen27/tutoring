@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views.generic import TemplateView
 
@@ -32,7 +32,7 @@ class BlogDetailView(TemplateView):
     template_name = "blog/blog_detail.html"
 
     def blog_detail(self):
-        return Blog.objects.get(pk=self.kwargs.get("pk", None))
+        return get_object_or_404(Blog, pk=self.kwargs.get("pk", None), published=1)
 
     def prev_entry(self):
         try:

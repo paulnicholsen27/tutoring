@@ -62,8 +62,8 @@ class TestPublishedMethods(TestCase):
         self.published_blog.save()
         self.unpublished_blog = Blog(
             title="unpublished",
-            opening_content="opening content",
-            extended_content="extended content",
+            opening_content="unpublished opening content",
+            extended_content="unpublished extended content",
             published=2
         )
         self.unpublished_blog.save()
