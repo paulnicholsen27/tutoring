@@ -1,15 +1,9 @@
-timezones?
 
 images aren't loading from ckeditor
 
 Add acceptable websites to Google API before prod
 
 deployment checklist in settings.py
-
-/Users/paulnichols/Documents/code/withinreach/withinreach/urls.py:24: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got django.views.static.serve). Pass the callable instead.
-  'document_root': settings.MEDIA_ROOT,
-
-django.bitly?
 
 add shortcut to admin for Jason
 
