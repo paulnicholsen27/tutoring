@@ -7,7 +7,7 @@ deployment checklist in settings.py
 
 add shortcut to admin for Jason
 
-share to facebook
+share to facebook (maybe just share title?!?)
 
 logo, favicon, etc
 
