@@ -11,3 +11,5 @@ share to facebook (maybe just share title?!?)
 
 logo, favicon, etc
 
+change secret key in prod
+
