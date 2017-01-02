@@ -1,5 +1,4 @@
 
-images aren't loading from ckeditor
 
 Add acceptable websites to Google API before prod
 
@@ -12,4 +11,6 @@ share to facebook (maybe just share title?!?)
 logo, favicon, etc
 
 change secret key in prod
+
+change example.com in django admin Sites to correct domain
 
