@@ -26,6 +26,8 @@ class ContactView(FormView):
         if form.is_valid():
             form.send_email()
             return redirect('contact')
+        else:
+            print form.errors
         return render(request, self.template_name, {'form': form})
 
     # def get_context_data(self, **kwargs):

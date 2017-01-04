@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'common',
     'blog',
     'django_social_share',
+    'captcha'
 ]
 
 MIDDLEWARE_CLASSES = [

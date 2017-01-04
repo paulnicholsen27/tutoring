@@ -3,6 +3,9 @@ from django.template.loader import get_template
 from django.core.mail import EmailMultiAlternatives
 from django.template import Context
 
+from captcha.fields import CaptchaField
+
+
 class ContactForm(forms.Form):
 
     contact_name = forms.CharField()
@@ -10,6 +13,7 @@ class ContactForm(forms.Form):
     contact_phone = forms.CharField()
     content = forms.CharField(widget=forms.Textarea)
     cc_me = forms.BooleanField(required=False, initial=False)
+    captcha = CaptchaField(required=True)
 
     def send_email(self):
         contact_name = self.data["contact_name"]
@@ -24,7 +28,7 @@ class ContactForm(forms.Form):
             "contact_phone": contact_phone,
             "contact_email": contact_email,
             "content": content,
-            })
+        })
 
         content = template.render(context)
         subject, from_email, to = "Within Reach Inquiry", contact_email, "pnichols104@gmail.com"
@@ -35,12 +39,11 @@ class ContactForm(forms.Form):
             from_email,
             ["pnichols104@gmail.com"],
             cc=[cc_address],
-            headers = {"Reply-To": contact_email}
-            )
+            headers={"Reply-To": contact_email}
+        )
         email.send()
-
 
     def __init__(self, *args, **kwargs):
         super(ContactForm, self).__init__(*args, **kwargs)
         for field in self.fields:
-            self.fields[field].widget.attrs['class'] = 'form-control'  
+            self.fields[field].widget.attrs['class'] = 'form-control'
