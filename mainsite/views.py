@@ -1,9 +1,10 @@
+from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, FormView
 
-from forms import ContactForm
 from common.tokens_and_keys import GOOGLE_API_KEY
-from django.contrib import messages
+from forms import ContactForm
+
 
 class HomepageView(TemplateView):
     template_name = "homepage.html"
@@ -11,6 +12,10 @@ class HomepageView(TemplateView):
 
 class AboutView(TemplateView):
     template_name = "about.html"
+
+
+class PaymentView(TemplateView):
+    template_name = "payment.html"
 
 
 class ContactView(FormView):
