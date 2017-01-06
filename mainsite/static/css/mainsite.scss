@@ -63,6 +63,19 @@
     }
 }
 
-#contact_form #submit {
-    padding-left: 0;
+
+#contact_form {
+
+    .captcha img {
+        margin-left: 10px;
+    }
+
+    input#id_captcha_1 {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #submit {
+        padding-left: 0;
+    }
 }

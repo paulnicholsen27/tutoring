@@ -14,8 +14,9 @@ change secret key in prod
 
 change example.com in django admin Sites to correct domain
 
-captcha for spam
 
 high res profile picture?
 
-payment page¡   
+payment page
+
+map is too big on mobile
