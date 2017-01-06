@@ -42,7 +42,7 @@
                     </h2>
                     <hr>
                     <p>Please fill out the form below and I will get in touch with you to set up an initial appointment.</p>
-                    <form role="form" action="{% url 'contact' %}/#contact_form" method="post">
+                    <form role="form" action="{% url 'contact' %}" method="post">
                         {% csrf_token %}
                         <div class="row">
                             {{ form.non_field_errors }}
