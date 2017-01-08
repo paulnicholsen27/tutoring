@@ -20,3 +20,5 @@ high res profile picture?
 payment page
 
 map is too big on mobile
+
+tests
