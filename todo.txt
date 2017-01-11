@@ -8,8 +8,6 @@ add shortcut to admin for Jason
 
 share to facebook (maybe just share title?!?)
 
-logo, favicon, etc
-
 change secret key in prod
 
 change example.com in django admin Sites to correct domain
@@ -20,5 +18,3 @@ high res profile picture?
 payment page
 
 map is too big on mobile
-
-tests
