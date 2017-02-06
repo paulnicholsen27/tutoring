@@ -19,5 +19,6 @@ payment page
 
 map is too big on mobile
 
-take off map on conctact page until address is final
+make favicon transparent
 
+fix menu on 992px (ish)
