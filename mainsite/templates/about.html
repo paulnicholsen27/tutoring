@@ -7,54 +7,17 @@
         <div class="row">
             <div class="box">
                 <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">About
-                        <strong>Within Reach</strong>
+                    <h2 class="intro-text text-center">
+                        <strong>Jason Nicholsen, LICSW, MSW</strong>
                     </h2>
-                    <hr>
                 </div>
-                <div class="col-md-6">
-                    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div class="img-responsive img-border-left"  style='overflow:hidden'><div id='gmap_canvas'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(38.889404,-76.978251),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(38.889404,-76.978251)});infowindow = new google.maps.InfoWindow({content:'<strong>Within Reach Psychotherapy</strong><br>1815 East Capitol St SE, Washington, DC 20003<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-                    {% comment %}
-                    http://embedgooglemaps.com/en/
-                    add class="img-responsive img-border-left" to main containing div, remove size attributes from style tags
-                    {% endcomment %}
+                <div class="col-md-4 headshot">
+                    <img class="img-responsive img-border" src="{% static 'img/headshot.jpg' %}" alt="Jason Nicholsen headshot (devilishly handsome)">
                 </div>
-                <div class="col-md-6">
-                    <p>This is a great place to introduce your company or project and describe what you do.</p>
-                    <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Our
-                        <strong>Team</strong>
-                    </h2>
-                    <hr>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                    <h3>John Smith
-                        <small>Job Title</small>
-                    </h3>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                    <h3>John Smith
-                        <small>Job Title</small>
-                    </h3>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                    <h3>John Smith
-                        <small>Job Title</small>
-                    </h3>
+                <div class="col-md-8 about-text">
+                    <p>Jason provides individual therapy, group therapy and couples counseling. He works with clients dealing with issues including anxiety, depression and relationship issues. He has a particular expertise on LGBT Issues, Aging Issues and Mood Disorders. Jason uses a wide range of modalities to address your concerns and personalize treatment to you as an individual.</p>
+                    <p>Jason earned a MSW from New York University where he also received a bachelor's degree in Social Sciences. Jason has been endorsed by the National Association of Cognitive-Behavioral Therapists as a Certified Substance Abuse Therapist and certified by the Center for Financial Social Work. </p>
+                    <p>Jason offers evening and Saturday appointments. To schedule an appointment please fill out our <a href="{% url 'contact' %}">contact page</a> or email us at <a href="mailto:jason@withinreachgroup.com?subject=Website inquiry">jason@withinreachgroup.com</a></p>
                 </div>
                 <div class="clearfix"></div>
             </div>
