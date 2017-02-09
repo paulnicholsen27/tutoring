@@ -37,6 +37,32 @@ h2.intro-text {
     margin-bottom: 20px;
 }
 
+
+/* homepage */
+
+img.lead {
+    margin-bottom: 20px;
+}
+
+ul.specialties {
+    list-style: none;
+    padding: 0;
+
+    li {
+        float: left;
+        display: block;
+        width: 33%;
+        text-align: center;
+        @media (max-width: $tablet-breakpoint) {
+            width: 50%;
+        }
+        @media (max-width: $mobile-breakpoint) {
+            width: 100%;
+        }
+    }
+}
+
+/* about page */
 .about-text {
     margin-top: -8px;
     text-align: justify;
