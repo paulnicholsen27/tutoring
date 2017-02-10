@@ -15,10 +15,8 @@ change example.com in django admin Sites to correct domain
 
 high res profile picture?
 
-payment page
-
 map is too big on mobile
 
 make favicon transparent
 
-fix menu on 992px (ish)
+
