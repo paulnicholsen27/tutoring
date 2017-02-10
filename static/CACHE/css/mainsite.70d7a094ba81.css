@@ -1,0 +1,44 @@
+/* line 3, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+#gmap_canvas {
+  height: 400px;
+  width: 100%; }
+
+/* line 8, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+.messages {
+  list-style: none;
+  width: 100%;
+  background: #c74848;
+  position: absolute;
+  opacity: .7;
+  text-align: center;
+  font-size: 18px; }
+
+/* contact form */
+/* line 20, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+.errorlist {
+  padding-left: 0;
+  margin-bottom: 0; }
+
+/* line 25, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+.errorlist li {
+  list-style: none;
+  color: red;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+/* line 31, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+#id_cc_me {
+  box-shadow: none;
+  margin-top: 0; }
+
+@media (max-width: 1200px) {
+  /* line 37, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+  #contact_form #email {
+    width: calc(100% - 80px);
+    float: left; }
+  /* line 42, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+  #contact_form #cc {
+    float: right; } }
+
+/* line 47, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+#contact_form #submit {
+  padding-left: 0; }

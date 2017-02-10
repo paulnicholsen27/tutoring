@@ -1,0 +1,7 @@
+/* line 1, /Users/paulnichols/Documents/code/withinreach/common/static/css/social_share.scss */
+.share-button#facebook a:before {
+  content: " ";
+  background-image: url('/static/img/facebook.png?cbcfba64820a');
+  display: block;
+  width: 60px;
+  height: 60px; }

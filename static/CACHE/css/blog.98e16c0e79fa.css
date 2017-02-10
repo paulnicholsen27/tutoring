@@ -1,0 +1,8 @@
+/* line 3, /Users/paulnichols/Documents/code/withinreach/blog/static/css/blog.scss */
+.blog_title a {
+  color: black; }
+
+@media (max-width: 992px) {
+  /* line 8, /Users/paulnichols/Documents/code/withinreach/blog/static/css/blog.scss */
+  body {
+    display: none; } }

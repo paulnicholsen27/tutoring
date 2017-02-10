@@ -1,0 +1,128 @@
+/* line 3, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+#gmap_canvas {
+  height: 400px;
+  width: 100%; }
+
+/* line 8, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+.messages {
+  list-style: none;
+  width: 100%;
+  position: absolute;
+  opacity: 0.7;
+  text-align: center;
+  font-size: 20px;
+  z-index: 3;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  padding-left: 0; }
+  @media (max-width: 1200px) {
+    /* line 8, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+    .messages {
+      opacity: 1; } }
+  /* line 22, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+  .messages li {
+    padding: 10px;
+    color: white; }
+    /* line 26, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+    .messages li.error {
+      background: #c74848; }
+    /* line 30, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+    .messages li.info {
+      background: #44ad34; }
+
+/* line 36, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+h2.intro-text {
+  margin-bottom: 20px;
+  text-decoration: underline; }
+
+/* homepage */
+/* line 44, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+img.lead {
+  margin-bottom: 20px; }
+
+/* line 48, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+ul.specialties {
+  list-style: none;
+  padding: 0; }
+  /* line 52, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+  ul.specialties li {
+    float: left;
+    display: block;
+    font-size: 16px;
+    width: 33%;
+    text-align: center; }
+    @media (max-width: 992px) {
+      /* line 52, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+      ul.specialties li {
+        width: 50%;
+        font-size: 14px; } }
+    @media (max-width: 767px) {
+      /* line 52, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+      ul.specialties li {
+        width: 100%; } }
+
+/* about page */
+/* line 69, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+.about-text {
+  margin-top: -8px;
+  text-align: justify; }
+
+/* line 74, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+.headshot {
+  margin-bottom: 20px; }
+
+/* contact form */
+/* line 80, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+.errorlist {
+  padding-left: 0;
+  margin-bottom: 0; }
+
+/* line 85, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+.errorlist li {
+  list-style: none;
+  color: red;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+/* line 91, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+#id_cc_me {
+  box-shadow: none;
+  margin-top: 0; }
+
+@media (max-width: 1200px) {
+  /* line 97, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+  #contact_form #email {
+    width: calc(100% - 80px);
+    float: left; }
+  /* line 102, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+  #contact_form #cc {
+    float: right; } }
+
+/* line 110, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+#contact_form .captcha img {
+  margin-left: 10px; }
+
+/* line 114, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+#contact_form input#id_captcha_1 {
+  display: block;
+  margin: 10px 0; }
+
+/* line 119, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+#contact_form #submit {
+  padding-left: 0; }
+
+/* payment info */
+/* line 127, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+.payment h4 {
+  margin-bottom: 5px; }
+  @media (max-width: 767px) {
+    /* line 127, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+    .payment h4 {
+      text-align: center; } }
+
+/* line 134, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+.payment p {
+  margin-bottom: 20px; }
+
+@media (max-width: 767px) {
+  /* line 138, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+  .payment ul {
+    padding-left: 16px; } }

@@ -1,0 +1,30 @@
+/* line 1, /Users/paulnichols/Documents/code/withinreach/common/static/css/social_share.scss */
+.sharekit {
+  margin-left: 0; }
+
+/* line 5, /Users/paulnichols/Documents/code/withinreach/common/static/css/social_share.scss */
+.sharekit li {
+  display: inline-block; }
+
+/* line 9, /Users/paulnichols/Documents/code/withinreach/common/static/css/social_share.scss */
+.share-button a {
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 40px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  text-indent: -9999px; }
+
+/* line 20, /Users/paulnichols/Documents/code/withinreach/common/static/css/social_share.scss */
+.share-button#facebook a {
+  background-image: url('/static/img/facebook.png?42e530217253'); }
+
+/* line 24, /Users/paulnichols/Documents/code/withinreach/common/static/css/social_share.scss */
+.share-button#twitter a {
+  background-image: url('/static/img/twitter.png?42e530217253'); }
+
+/* line 28, /Users/paulnichols/Documents/code/withinreach/common/static/css/social_share.scss */
+.share-button#google-plus a {
+  background-image: url('/static/img/googleplus.png?42e530217253'); }

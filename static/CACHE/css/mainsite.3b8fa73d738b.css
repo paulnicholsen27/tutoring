@@ -1,0 +1,26 @@
+/* line 3, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+#gmap_canvas {
+  height: 400px;
+  width: 100%; }
+
+/* contact form */
+/* line 10, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+.errorlist {
+  padding-left: 0;
+  margin-bottom: 0; }
+
+/* line 15, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+.errorlist li {
+  list-style: none;
+  color: red;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+/* line 21, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+#id_cc_me {
+  box-shadow: none;
+  margin-top: 0; }
+
+@media (max-width: 992px) {
+  /* line 27, /Users/paulnichols/Documents/code/withinreach/mainsite/static/css/mainsite.scss */
+  body {
+    display: none; } }
