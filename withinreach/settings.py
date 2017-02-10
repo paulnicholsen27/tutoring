@@ -13,7 +13,12 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 import dj_database_url
 import os
 import sys
-from common.tokens_and_keys import DJANGO_SECRET_KEY
+import os
+
+try:
+    from common.tokens_and_keys import DJANGO_SECRET_KEY
+except ImportError:
+    DJANGO_SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

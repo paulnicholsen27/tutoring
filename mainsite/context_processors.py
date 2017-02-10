@@ -1,4 +1,9 @@
-from common.tokens_and_keys import GOOGLE_API_KEY
+import os
+
+try:
+    from common.tokens_and_keys import GOOGLE_API_KEY
+except ImportError:
+    GOOGLE_API_KEY = os.environ["GOOGLE_API_KEY"]
 
 
 def google_api(request):
