@@ -16,7 +16,7 @@ ipython==4.2.0
 ipython-genutils==0.1.0
 libsass==0.11.1
 pathlib2==2.1.0
-pbr==0.10.8
+pbr==1.10.0
 pexpect==4.0.1
 pickleshare==0.7.2
 Pillow==3.2.0
