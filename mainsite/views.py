@@ -1,9 +1,16 @@
+import os
+
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, FormView
-
-from common.tokens_and_keys import GOOGLE_API_KEY
 from forms import ContactForm
+
+
+try:
+    from common.tokens_and_keys import GOOGLE_API_KEY
+except ImportError:
+    GOOGLE_API_KEY = os.environ["GOOGLE_API_KEY"]
+    
 
 
 class HomepageView(TemplateView):
