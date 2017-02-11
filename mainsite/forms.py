@@ -1,7 +1,6 @@
 from django import forms
 from django.template.loader import get_template
 from django.core.mail import EmailMultiAlternatives
-from django.template import Context
 
 from captcha.fields import CaptchaField
 
@@ -23,12 +22,12 @@ class ContactForm(forms.Form):
 
         template = get_template("contact.txt")
 
-        context = Context({
+        context = {
             "contact_name": contact_name,
             "contact_phone": contact_phone,
             "contact_email": contact_email,
             "content": content,
-        })
+        }
 
         content = template.render(context)
         subject, from_email, to = "Within Reach Inquiry", contact_email, "jason@withinreachgroup.com"
