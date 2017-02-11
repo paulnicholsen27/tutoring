@@ -30,6 +30,7 @@ rjsmin==1.0.12
 simplegeneric==0.8.1
 six==1.10.0
 stevedore==1.2.0
+testfixtures==4.13.4
 traitlets==4.2.1
 virtualenv==15.0.1
 virtualenv-clone==0.2.5

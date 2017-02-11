@@ -44,9 +44,3 @@ class ContactView(FormView):
             messages.add_message(request, messages.ERROR, "Please correct the errors below.")
             return redirect('contact')
         return render(request, self.template_name, {'form': form})
-
-    # def get_context_data(self, **kwargs):
-    #     context = super(ContactView, self).get_context_data(**kwargs)
-    #     print GOOGLE_API_KEY
-    #     context.update({"form": self.form_class, "google_api": GOOGLE_API_KEY})
-    #     return context

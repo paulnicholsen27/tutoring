@@ -3,7 +3,7 @@ from django.template.loader import get_template
 from django.core.mail import EmailMultiAlternatives
 from django.template import Context
 
-# from captcha.fields import CaptchaField
+from captcha.fields import CaptchaField
 
 
 class ContactForm(forms.Form):
@@ -13,7 +13,7 @@ class ContactForm(forms.Form):
     contact_phone = forms.CharField()
     content = forms.CharField(widget=forms.Textarea)
     cc_me = forms.BooleanField(required=False, initial=False)
-    # captcha = CaptchaField(required=True)
+    captcha = CaptchaField(required=True)
 
     def send_email(self):
         contact_name = self.data["contact_name"]
