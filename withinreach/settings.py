@@ -73,6 +73,7 @@ SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False
 CSRF_COOKIE_HTTPONLY = True
 X_FRAME_OPTIONS = "DENY"
+CSRF_COOKIE_DOMAIN = ".withinreachgroup.com"
 
 ROOT_URLCONF = 'withinreach.urls'
 
