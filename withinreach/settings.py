@@ -20,6 +20,11 @@ try:
 except ImportError:
     DJANGO_SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 
+try:
+    from common.tokens_and_keys import GMAIL_PASSWORD
+except ImportError:
+    GMAIL_PASSWORD = os.environ["GMAIL_PASSWORD"]
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -179,8 +184,8 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'testing@example.com'
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_USER = 'paulnicholsen27@gmail.com'
+EMAIL_HOST_PASSWORD = GMAIL_PASSWORD
 EMAIL_USE_TLS = False
 EMAIL_PORT = 1025
 
