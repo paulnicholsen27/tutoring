@@ -184,7 +184,7 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'testing@example.com'
-EMAIL_HOST_USER = 'paulnicholsen27@gmail.com'
+EMAIL_HOST_USER = 'pnichols104@gmail.com'
 EMAIL_HOST_PASSWORD = GMAIL_PASSWORD
 EMAIL_USE_TLS = False
 EMAIL_PORT = 1025
