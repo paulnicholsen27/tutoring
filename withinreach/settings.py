@@ -182,10 +182,10 @@ STATICFILES_FINDERS = (
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+# # Extra places for collectstatic to find static files.
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'staticfiles'),
+# )
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'testing@example.com'
