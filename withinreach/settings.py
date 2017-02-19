@@ -180,7 +180,9 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+ADMINS = [("Paul Nicholsen", "paulnicholsen27@gmail.com")]
+
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # # Extra places for collectstatic to find static files.
 # STATICFILES_DIRS = (
