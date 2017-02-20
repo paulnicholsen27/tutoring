@@ -172,6 +172,7 @@ COMPRESS_PRECOMPILERS = (
 )
 
 COMPRESS_OFFLINE = True
+COMPRESS_ENABLED = True
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
