@@ -4,7 +4,6 @@
     clear: both;
     padding: 15px 0;
     text-align: center;
-
 }
 
 .sharekit li {
@@ -24,17 +23,17 @@
 }
 
 .share-button#facebook a {
-    background-image: url("../../staticfiles/img/facebook.png");
+    background-image: url("../../static/img/facebook.png");
 }
 
 .share-button#twitter a {
-    background-image: url("../../staticfiles/img/twitter.png");
+    background-image: url("../../static/img/twitter.png");
 }
 
 .share-button#google-plus a {
-    background-image: url("../../staticfiles/img/googleplus.png");
+    background-image: url("../../static/img/googleplus.png");
 }
 
 .share-button#email a {
-    background-image: url("../../staticfiles/img/email.png");
+    background-image: url("../../static/img/email.png");
 }
