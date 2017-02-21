@@ -186,12 +186,17 @@ ADMINS = [("Paul Nicholsen", "paulnicholsen27@gmail.com")]
 #     os.path.join(BASE_DIR, 'staticfiles'),
 # )
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL = 'testing@example.com'
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = "smtp.gmail.com"
 EMAIL_HOST_USER = 'paulnicholsen27@gmail.com'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 EMAIL_HOST_PASSWORD = GMAIL_PASSWORD
-EMAIL_USE_TLS = False
-EMAIL_PORT = 1025
+EMAIL_PORT = 587
 
 if 'test' in sys.argv:
     CAPTCHA_TEST_MODE = True

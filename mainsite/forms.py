@@ -30,13 +30,13 @@ class ContactForm(forms.Form):
         }
 
         content = template.render(context)
-        subject, from_email, to = "Within Reach Inquiry", contact_email, "jason@withinreachgroup.com"
+        subject, from_email, to_email = "Within Reach Inquiry", contact_email, "jason@withinreachgroup.com"
         cc_address = contact_email if "cc_me" in self.data else None
         email = EmailMultiAlternatives(
             subject,
             content,
             from_email,
-            ["jason@withinreachgroup.com"],
+            [to_email],
             cc=[cc_address],
             headers={"Reply-To": contact_email}
         )
