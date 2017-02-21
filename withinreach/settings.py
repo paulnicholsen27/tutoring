@@ -186,9 +186,9 @@ ADMINS = [("Paul Nicholsen", "paulnicholsen27@gmail.com")]
 #     os.path.join(BASE_DIR, 'staticfiles'),
 # )
 
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'testing@example.com'
-EMAIL_HOST_USER = 'pnichols104@gmail.com'
+EMAIL_HOST_USER = 'paulnicholsen27@gmail.com'
 EMAIL_HOST_PASSWORD = GMAIL_PASSWORD
 EMAIL_USE_TLS = False
 EMAIL_PORT = 1025
