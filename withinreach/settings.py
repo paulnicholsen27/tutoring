@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 import dj_database_url
 import os
 import sys
-import os
 
 try:
     from common.tokens_and_keys import DJANGO_SECRET_KEY
@@ -187,7 +186,7 @@ ADMINS = [("Paul Nicholsen", "paulnicholsen27@gmail.com")]
 #     os.path.join(BASE_DIR, 'staticfiles'),
 # )
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'testing@example.com'
 EMAIL_HOST_USER = 'pnichols104@gmail.com'
 EMAIL_HOST_PASSWORD = GMAIL_PASSWORD
