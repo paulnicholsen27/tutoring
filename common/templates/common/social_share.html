@@ -1,5 +1,9 @@
 {% load social_share %}
 {% load static %}
+{% load compress %}
+{% compress css %}
+<link href="{% static 'css/social_share.scss' %}" rel="stylesheet" type="text/x-scss">
+{% endcompress %}
 
 {% block extrahead %}
 <meta property="og:type" content="article" />
