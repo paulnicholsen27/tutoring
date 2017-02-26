@@ -179,7 +179,7 @@ COMPRESS_PRECOMPILERS = (
 )
 
 COMPRESS_ENABLED = True
-COMPRESS_OFFLINE = False
+COMPRESS_OFFLINE = True
 
 ADMINS = [("Paul Nicholsen", "paulnicholsen27@gmail.com")]
 
