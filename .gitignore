@@ -64,5 +64,4 @@ target/
 #Heroku
 venv
 *.pyc
-staticfiles
 .env

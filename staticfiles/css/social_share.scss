@@ -1,0 +1,39 @@
+.sharekit {
+    width: 255px;
+    margin: 0 auto;
+    clear: both;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.sharekit li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.share-button a {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 40px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-indent: -9999px;
+}
+
+.share-button#facebook a {
+    background-image: url("../img/facebook.png");
+}
+
+.share-button#twitter a {
+    background-image: url("../img/twitter.png");
+}
+
+.share-button#google-plus a {
+    background-image: url("../img/googleplus.png");
+}
+
+.share-button#email a {
+    background-image: url("../img/email.png");
+}
