@@ -1,7 +1,7 @@
 import os
 
 from django.contrib import messages
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, render_to_response
 from django.views.generic import TemplateView, FormView
 from forms import ContactForm
 
@@ -10,7 +10,6 @@ try:
     from common.tokens_and_keys import GOOGLE_API_KEY
 except ImportError:
     GOOGLE_API_KEY = os.environ["GOOGLE_API_KEY"]
-    
 
 
 class HomepageView(TemplateView):
@@ -27,14 +26,13 @@ class PaymentView(TemplateView):
 
 class ContactView(FormView):
     template_name = "contact.html"
-    form_class = ContactForm
 
     def get(self, request, *args, **kwargs):
-        form = self.form_class(initial=self.initial)
+        form = ContactForm(initial=self.initial)
         return render(request, self.template_name, {'form': form})
 
     def post(self, request, *args, **kwargs):
-        form = self.form_class(request.POST)
+        form = ContactForm(request.POST)
         if form.is_valid():
             form.send_email()
             messages.add_message(request, messages.INFO, "Your email has been sent.  We will respond within 48 hours.  If this is an emergency please call 911.")
@@ -42,5 +40,4 @@ class ContactView(FormView):
         else:
             print form.errors
             messages.add_message(request, messages.ERROR, "Please correct the errors below.")
-            return redirect('contact')
-        return render(request, self.template_name, {'form': form})
+            return render(request, self.template_name, {'form': form})
