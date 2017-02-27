@@ -38,6 +38,5 @@ class ContactView(FormView):
             messages.add_message(request, messages.INFO, "Your email has been sent.  We will respond within 48 hours.  If this is an emergency please call 911.")
             return redirect('contact')
         else:
-            print form.errors
             messages.add_message(request, messages.ERROR, "Please correct the errors below.")
             return render(request, self.template_name, {'form': form})

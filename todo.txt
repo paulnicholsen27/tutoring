@@ -2,21 +2,15 @@
 
 Add acceptable websites to Google API before prod
 
-deployment checklist in settings.py
 
 add shortcut to admin for Jason
 
-share to facebook (maybe just share title?!?)
-
 change secret key in prod
-
-change example.com in django admin Sites to correct domain
-
 
 high res profile picture?
 
 map is too big on mobile
 
-make favicon transparent
+add captcha refresh option
 
-
+fix escaping problem in emails

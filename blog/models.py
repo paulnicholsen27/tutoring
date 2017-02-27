@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.core.urlresolvers import reverse
+from django.contrib.sites.models import Site
 from django.utils.text import slugify
 
 from ckeditor_uploader.fields import RichTextUploadingField
@@ -31,6 +32,11 @@ class Blog(models.Model):
 
     def get_absolute_url(self):
         return reverse("blog:blog_detail", kwargs={"slug": self.slug, "pk": self.pk})
+
+    def get_full_absolute_url(self):
+        domain = Site.objects.get_current().domain
+
+        return "http://%s%s" % (domain, self.get_absolute_url())
 
     def __unicode__(self):
         return self.title
