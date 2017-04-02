@@ -93,7 +93,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.core.context_processors.request',
-                'mainsite.context_processors.google_api'
+                'mainsite.context_processors.google_api',
+                'mainsite.context_processors.blog_count',
             ],
             'loaders': (
                 'django.template.loaders.filesystem.Loader',
